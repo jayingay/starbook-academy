@@ -1,0 +1,34 @@
+@import "./loginVariables"; 
+
+header.scrolled{
+    background-color: $secondaryColor;
+    transition: .5s ease-in-out;
+}
+
+*,
+*::before, 
+*::after {
+    box-sizing : border-box;
+    padding : 0;
+    margin : 0;
+    outline : none;
+    transition : .1s ease-in-out;
+    font-family: $primaryFont;
+    font-size: 100%;
+
+    @include responsive(phone){
+        font-size: 70%;
+    }
+
+    @include responsive(tablet-port){
+        font-size: 85%;
+    }
+
+    @include responsive(tablet-landscape){
+        font-size: 95%;
+    }
+
+    @include responsive(desktop){
+        font-size: 105%;
+    }
+}

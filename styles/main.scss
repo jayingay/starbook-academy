@@ -1,0 +1,27 @@
+//homepage
+@import "./homepage/homeMediaQueries";
+@import "./homepage/homeVariables"; 
+@import "./homepage/homeGlobal";
+@import "./homepage/homeMixin";
+@import "./homepage/homeHeader";
+@import "./homepage/homeBanner";
+@import "./homepage/homeContent";
+@import "./homepage/homeCarousel";
+@import "./homepage/homeFooter";
+
+//aboutpage
+@import "./aboutpage/aboutMediaQueries";
+@import "./aboutpage/aboutVariables";
+@import "./aboutpage/aboutGlobal";
+@import "./aboutpage/aboutContent";
+@import "./aboutpage/aboutImages";
+
+//loginpage
+@import "./loginpage/loginMediaQueries";
+@import "./loginpage/loginVariables";
+@import "./loginpage/loginGlobal";
+@import "./loginpage/loginForm";
+
+
+
+

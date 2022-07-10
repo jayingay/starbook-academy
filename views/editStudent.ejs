@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Edit-Student</title>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow navbar-dark navbar-offcanvas" style="background-color: #7C3E66;">
+        <a class="navbar-brand mr-auto" href="/home"><img src="/img/logo.png" id="logo"></a>
+
+        <h4 class="ml-auto text-light mt-2" id="welcome"> Welcome : ADMIN &nbsp; &nbsp;</h4>
+
+        <button class="navbar-toggler d-block" type="button" id="navToggle">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="sidebar offcanvas-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard"> <i class="bi bi-person-fill"></i> &nbsp;Dashboard  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard/manage-student"> <i class="bi bi-people-fill"></i> &nbsp;Manage Student<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard/add"> <i class="bi bi-person-plus-fill"></i> &nbsp; Add Student<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div>
+            <h1 class="heading" id="edit-heading">EDIT DETAILS</h1>
+        </div>
+
+        <a href="/dashboard/manage-student" class="btn_back"> <i class="bi bi-arrow-left-circle"></i> &nbsp; Back </a>
+
+        <form action="/dashboard/edit/<%= records.studentID %>" method="post" class="mt-5">
+            <div class="row">
+                <div class="form-group col-lg-3">
+                    <img alt="User Pic" src="http://localhost:2000/images/uploaded_images/<%= records.image %>" class="img-responsive">
+                    <input type="file" class="form-control file" id="image_name" name="image_name" value="<%= records.image %>">
+                </div>
+                <div class="profile-details form-group col-lg-9">
+                    <div class="details" id="edit-name">
+                        <label for="first_name" class="label d-inline">Student ID</label>
+                        <input type="text" class="form-control" value="<%= records.studentID %>" disabled>
+                    </div>
+                    <div class="details" >
+                        <label for="first_name" class="label d-inline">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" value="<%= records.first_name %>">
+                    </div>
+                    <div class="details">
+                        <label for="last_name" class="label d-inline">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" value="<%= records.last_name %>">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="form-group col-xl-12">
+                    <label for="adress" class="other-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" value="<%= records.address %>">
+                </div>
+    
+            </div>
+        
+        
+            <div class="row">
+                <div class="form-group col-lg-3">
+                    <label for="gender" class="other-label">Gender</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                        <label class="form-check-label" for="inlineRadio1">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
+                        <label class="form-check-label" for="inlineRadio2">Male</label>
+                    </div>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label for="dob" class="other-label">Date of Birth</label>
+                    <input type="text" class="form-control" id="dob" name="dob" 
+                    value="<%= records.dob %>">
+                </div>
+                <div class="form-group col-lg-5">
+                    <label for="email" class="other-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="<%= records.email %>">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group  col-xl-3" id="subject-col">
+                    <label for="subject1" class="subject-title mt-4 ml-5">Physics</label>
+                    <input type="text" class="form-control" id="subject1" name="subject1" onkeyup="sum()">
+                </div>
+                <div class="form-group  col-xl-3"  id="subject-col">
+                    <label for="subject2" class="subject-title mt-4 ml-5">Mathematics</label>
+                    <input type="text" class="form-control" id="subject2" name="subject2" onkeyup="sum()">
+                </div>
+                <div class="form-group  col-xl-3"  id="subject-col">
+                    <label for="subject3" class="subject-title mt-4 ml-5">Data Structure</label>
+                    <input type="text" class="form-control" id="subject3" name="subject3" onkeyup="sum()">
+                </div>
+                <div class="form-group  col-xl-3"  id="subject-col">
+                    <label for="average" class="subject-title mt-4 ml-5">Average</label>
+                    <input type="text" class="form-control" id="average" name="average">
+                    <input type="text" class="form-control" id="status" name="status">
+                </div>
+            </div>
+            <button type="submit" class="btn_save mb-5">Save Changes</button>
+        </form>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function sum() {
+            var firstNum = document.getElementById('subject1').value;
+            var secondNum = document.getElementById('subject2').value;
+            var thirdNum = document.getElementById('subject3').value;
+
+            var result = parseFloat(firstNum) + parseFloat(secondNum) + parseFloat(thirdNum);
+            var avg = result / 3;
+            
+            if(avg >= 75 && avg <= 100){
+                document.getElementById('average').value = avg.toFixed(2);
+                document.getElementById('status').value = 'PASSED';
+            }else if(avg >= 69 && avg <= 74){
+                document.getElementById('average').value = avg.toFixed(2);
+                document.getElementById('status').value = 'FAILED';
+            }else{
+    
+            }  
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+        console.log("document is ready");
+        $('[data-toggle="offcanvas"], #navToggle').on('click', function () {
+            $('.offcanvas-collapse').toggleClass('open')
+        })
+    });
+    window.onload = function () {
+        console.log("window is loaded");
+    };
+    </script>
+</body>
+</html>

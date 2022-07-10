@@ -1,1 +1,1 @@
-# starbook-academy
+# student-management

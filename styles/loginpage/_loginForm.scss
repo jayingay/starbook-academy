@@ -1,0 +1,119 @@
+@import "./loginVariables"; 
+@import "./loginMediaQueries";
+
+#login{
+    background: linear-gradient(rgba(242, 238, 238, 0.492),rgba(241, 234, 234, 0.475)),url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    .container{
+        min-height: 42rem;
+
+        &__logo-sec{
+            height: 250px;
+            width: 250px;
+        }
+
+        &__login-heading{
+            font-size: $Heading3;
+            color: $thirdColor;
+        }
+
+        &__login-form{
+            background-color: $secondaryColor;
+            box-shadow: 5px 10px 8px #888888;
+            margin: 2rem 15rem;
+            padding: 6rem 5rem;
+            border-radius: 25px;
+            color: $primaryColor;
+
+            @include responsive(tablet-landscape){
+                margin: 2rem 3rem;
+                padding: 3rem 2rem;
+            }
+
+            @include responsive(tablet-port){
+                margin: 2rem 5rem;
+                padding: 6rem 3rem;
+            }
+
+            @include responsive(phone){
+                margin: 2rem 0rem;
+                padding: 3rem 1rem;
+            }
+            
+        }
+
+        &__inputField{
+            height: 3.5rem;
+            border-radius: .75rem;
+        }
+
+        &__loginButton{
+            background-color: $fourthColor;
+            padding: 0.6rem 5rem;
+            margin-top: 1.5rem;
+            border-radius: .75rem;
+            box-shadow: 3px 6px 4px rgba(55, 50, 50, 0.891);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &__font{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// body{
+//     // background: linear-gradient(rgba(253, 253, 253, 0.857),rgba(255, 255, 255, 0.829)),url(../img/banner.png);
+//     // background-repeat: no-repeat;
+//     // background-position: center;
+//     // background-size: cover;
+//     // height: 100vh;
+// }
+
+// #login{
+    
+//     .container{
+
+//         &__center-logo{
+//             background-color: $secondaryColor;
+//             margin-top: 1.5rem;
+//             }
+
+//         &__login-heading{
+//             font-style: $primaryFont;
+//             color: $secondaryColor;
+//             font-size: $Heading3;
+//             margin-top: 2rem;
+//             margin-bottom: 2rem;
+//         }
+//     }
+
+// }
+
+//     .form{
+
+//         .container{
+//             @include flexboxCenter();
+//             height: 100%;
+//             width: 400px;
+//             background-color: $primaryColor;
+//             box-shadow: 5px 10px 8px #888888;
+//             padding: 1rem;
+//             border-radius: 10px;
+
+    
+        
+//     }
+// }
+
+
+        
+
+
+
+

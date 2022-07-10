@@ -1,0 +1,21 @@
+//Flexbox Elements
+@mixin flexbox{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+//Flexbox Elements Perfect Center
+@mixin flexboxCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+//Flexbox Elements Reverse
+@mixin flexboxReverse{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}

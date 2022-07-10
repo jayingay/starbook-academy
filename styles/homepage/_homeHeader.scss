@@ -1,0 +1,72 @@
+@import "./homeVariables";
+@import "./homeGlobal";
+@import "./homeMixin";
+
+
+.navbar{
+
+    &__navbar-brand{
+        max-width: 25%;
+        height: auto;
+    }
+
+    &__nav-logo{
+        max-width: 100%;
+        height:  auto;
+        padding: 5px 5px;
+
+        @include responsive(tablet-port){
+            max-width: 300px;
+        }
+
+        @include responsive(phone){
+            max-width: 250px;
+        }
+    }
+
+    &__link{
+        font-size: .83rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-left: .80rem;
+        color: $primaryColor;
+
+        &:hover{
+            color: $fifthColor;
+        }
+
+        @include responsive(phone){
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__button{
+        padding: .50rem 1rem .50rem 1rem;
+        border-radius: 3rem;
+        font-size: 1rem;
+        font-weight: map-get($font-weight, 'medium');
+        color: $thirdColor;
+        background-color: $fourthColor;
+        text-decoration: none;
+        margin-top: 2.5rem;
+        margin-left: 1rem;
+        border: 3px solid $primaryColor;
+        
+        &:hover{
+            text-decoration: none;
+            background-color: transparent;
+            color: #fff;
+        }
+    }
+
+    &__nav-list{
+        @include flexbox();
+
+        @include responsive(phone){
+            margin-bottom: 1.5rem;
+        } 
+    }
+}
+
+

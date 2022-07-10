@@ -1,0 +1,43 @@
+@import "./homeVariables";
+@import "./homeGlobal";
+@import "./homeMixin";
+
+#banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.404)),url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 35.625rem;
+
+    @include responsive(phone){
+        min-height: 30rem;
+    }
+    
+    @include responsive(tablet-port){
+        min-height: 32rem;
+    }
+
+    .container{
+        @include flexboxCenter();
+        width: 100%;
+        height: 55vh;
+
+        &__heading{
+            font-family: $primaryFont;
+            font-size: $Heading1;
+            color: $primaryColor;
+            letter-spacing: 0.047rem;
+            margin-top: 2rem;
+            font-weight: 700;
+            text-shadow:  2px 2px 4px #000000;
+
+            @include responsive(tablet-port){
+                font-size: 6rem;
+            }
+
+            @include responsive(phone){
+                font-size: 3.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import "./homeVariables"; 
+@import "./homeMediaQueries";
+
+#footer{
+    background-color: $thirdColor;
+
+    .container{
+        border-bottom: 2px solid white;
+    }
+}

@@ -1,0 +1,59 @@
+@import "./aboutVariables";
+@import "./aboutGlobal";
+
+
+.navbar{
+
+    &__burg{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") ;
+    }
+    
+    &__navbar-brand{
+        max-width: 25%;
+        height: auto;
+    }
+
+    &__nav-logo{
+        max-width: 100%;
+        height:  auto;
+        padding: 5px 5px;
+
+        @include responsive(tablet-port){
+            max-width: 300px;
+        }
+
+        @include responsive(phone){
+            max-width: 250px;
+        }
+    }
+
+    &__link{
+        font-size: .83rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-left: .80rem;
+        color: $primaryColor;
+
+        &:hover{
+            color: $fifthColor;
+        }
+    }
+
+    &__button{
+        padding: .75rem 1rem .75rem 1rem;
+        border-radius: .125rem;
+        font-size: 1rem;
+        font-weight: map-get($font-weight, 'medium');
+        color: $thirdColor;
+        background-color: $fourthColor;
+        text-decoration: none;
+        margin-top: 2.5rem;
+        margin-left: 1rem;
+        border-radius: 8px;
+        
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

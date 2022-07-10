@@ -1,0 +1,18 @@
+@mixin responsive($breakPoints) {
+    
+    @if($breakPoints == phone){
+        @media(max-width : 470px){@content};
+    }
+
+    @if($breakPoints == tablet-port){
+        @media(max-width : 860px){@content};
+    }
+
+    @if($breakPoints == tablet-landscape){
+        @media(max-width : 1200px){@content};
+    }
+
+    @if($breakPoints == desktop){
+        @media(max-width : 1300px){@content};
+    }
+}

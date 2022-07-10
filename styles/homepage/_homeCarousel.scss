@@ -1,0 +1,21 @@
+@import "./homeVariables";
+@import "./homeMediaQueries";
+
+
+#carousel{
+    background-color: $fourthColor;
+
+    .container{
+        
+        &__title{
+            font-style: $primaryFont;
+            color: $secondaryColor;
+            font-size: $Heading2;
+
+            @include responsive(phone){
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,33 @@
+    <%- include('../public/partials/header.ejs'); %>
+
+<body>
+    <section id="login">
+        <div class="container">
+            <div class="pt-5 text-center w-100">
+                <a href="/home"><img class="container__logo-sec" src="img/logo-2.png" alt="logo"></a>
+            </div>
+            <h1 class="container__login-heading text-center">Please log you account here</h1>
+
+            <form class="container__login-form" action="/login" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="container__font">Username/Email</label>
+                    <input type="email" class="container__inputField form-control" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="container__font">Password</label>
+                    <input type="password" class="container__inputField form-control" id="password" name="password">
+                </div>
+
+                <div class="w-100 d-flex justify-content-center" >
+                    <button type="submit" class="container__loginButton">Login</button>
+                </div>
+                
+            </form>
+        </div>
+
+    </section>
+
+    <%- include('../public/partials/footer.ejs'); %>
+
+    
